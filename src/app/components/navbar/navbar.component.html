@@ -1,0 +1,56 @@
+<nav class="hamburger-menu" [ngClass]="{'expand' : isNavbarOpen}">
+    <button class="hamburger-btn" [ngClass]="{'active' : isNavbarOpen}" (click)="toggleNavbar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="nav-items">
+        <li title="Home">
+            <a routerLink="home" routerLinkActive="active">
+                <img src="../../../assets/icons/home-icon.png" alt="home-icon">
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a title="File(s) Upload" routerLink="uploads" routerLinkActive="active">
+                <img src="../../../assets/icons/upload-icon.png" alt="home-icon">
+                <span>
+                    File(s) Upload
+                </span>
+            </a>
+        </li>
+        <li>
+            <a title="Data Profile" routerLink="data-profile" routerLinkActive="active">
+                <img src="../../../assets/icons/data-profile-icon.png" alt="home-icon">
+                <span>
+                    Data Profile
+                </span>
+            </a>
+        </li>
+        <li>
+            <a title="Data Mapper-view" routerLink="data-view" routerLinkActive="active">
+                <img src="../../../assets/icons/data-map-view-icon.png" alt="home-icon">
+                <span>
+                    Data Mapper-view
+                </span>
+            </a>
+        </li>
+        <li>
+            <a title="Data Mapper-review" routerLink="data-review" routerLinkActive="active">
+                <img src="../../../assets/icons/data-map-review-icon.png" alt="home-icon">
+                <span>
+                    Data Mapper-review
+                </span>
+            </a>
+        </li>
+        <li>
+            <a title="Logout">
+                <img src="../../../assets/icons/logout-power-icon.png" alt="home-icon">
+                <span>
+                    Logout
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>

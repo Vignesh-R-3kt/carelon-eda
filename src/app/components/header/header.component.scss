@@ -1,0 +1,88 @@
+@import "../../../variables.scss";
+
+.header {
+  padding: 12px 24px;
+  background: $secondary;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      a {
+        cursor: pointer;
+        img {
+          width: 30px;
+          height: 30px;
+          filter: brightness(1.5);
+        }
+      }
+    }
+
+    .user-wrapper {
+      position: relative;
+
+      .user-btn {
+        background: none;
+        border: none;
+        border: 2px solid $white;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+        }
+      }
+
+      .user-dropdown {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 10px);
+        background: $white;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid $grey;
+        flex-direction: column;
+        gap: 8px;
+        display: flex;
+        z-index: 9;
+
+        li {
+          a {
+            white-space: nowrap;
+            font-size: 14px;
+            text-align: right;
+            display: block;
+            padding: 4px 6px;
+            border-radius: 6px;
+            font-weight: 500;
+
+            &:hover {
+              background: $primary;
+              color: $white;
+            }
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background: $white;
+          transform: rotate(45deg);
+          top: -5px;
+          right: 12px;
+        }
+      }
+    }
+  }
+}

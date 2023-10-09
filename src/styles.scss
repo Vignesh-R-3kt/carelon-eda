@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@import "./variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: transparent;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+label,
+button,
+input,
+::after,
+::before,
+td,
+th {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+::selection {
+  color: $white;
+  background: $secondary;
+}
+
+.cmn-btn {
+  display: inline-block;
+  padding: 7px 24px 8px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+  background: $secondary;
+  line-height: 22px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary;
+  }
+}
+
+input {
+  caret-color: $light-font;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+app-home,
+app-data-profile,
+app-mapper-view,
+app-mapper-review,
+app-file-upload {
+  animation: reveal 0.6s ease forwards;
+  display: block;
+  height: 100%;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

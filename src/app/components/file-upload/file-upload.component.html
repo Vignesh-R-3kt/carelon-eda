@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="wrapper">
+        <!-- <h2>Upload Files</h2> -->
+        <ul class="upload-wrapper">
+            <li>
+                <p>Upload Source Files :</p>
+                <app-upload [multipleFiles]="true" [inputType]="'source'"></app-upload>
+            </li>
+            <li>
+                <p>Upload Target File :</p>
+                <app-upload [multipleFiles]="false" [inputType]="'target'"></app-upload>
+            </li>
+            <li>
+                <p>Upload Mapping Documents :</p>
+                <app-upload [multipleFiles]="true" [inputType]="'mapping'"></app-upload>
+            </li>
+        </ul>
+
+        <div class="buttons-wrapper">
+            <button class="upload-files">Upload files & (Re)Train Model</button>
+            <button class="view-data-pr">View Data Profile</button>
+        </div>
+    </div>
+</div>

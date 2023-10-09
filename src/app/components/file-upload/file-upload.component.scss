@@ -1,0 +1,46 @@
+@import "../../../variables.scss";
+
+.container {
+  height: 100%;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .upload-wrapper {
+      display: flex;
+      gap: 18px;
+
+      li {
+        width: 33.333333%;
+
+        p {
+          font-size: 16px;
+          text-align: center;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .buttons-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: auto;
+      margin-bottom: 24px;
+
+      button {
+        font-size: 14px;
+        font-weight: 600;
+        background: $secondary;
+        color: $white;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 20px;
+      }
+    }
+  }
+}

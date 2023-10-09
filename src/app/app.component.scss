@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+.loader {
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+
+  .spinner {
+    display: block;
+    width: 200px;
+    height: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+
+  .spinner::before {
+    content: "";
+    position: absolute;
+    background: $secondary;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+  }
+
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
+}

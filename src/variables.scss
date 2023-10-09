@@ -1,0 +1,19 @@
+:root {
+  --color-primary: #5009b5;
+  --color-secondary: #794cff;
+  --color-brand: #2b1b49;
+  --color-bg: #f5f5f5;
+  --color-white: #ffffff;
+  --color-dark: #231e33;
+  --color-light-font: #666666;
+  --color-grey: #cccccc;
+}
+
+$primary: var(--color-primary);
+$brand: var(--color-brand);
+$bg: var(--color-bg);
+$white: var(--color-white);
+$dark: var(--color-dark);
+$light-font: var(--color-light-font);
+$grey: var(--color-grey);
+$secondary: var(--color-secondary);

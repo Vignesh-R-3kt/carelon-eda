@@ -1,0 +1,62 @@
+@import "../../../variables.scss";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    max-width: 400px;
+    padding: 32px 24px;
+    border: 1px solid $grey;
+    border-radius: 12px;
+    width: 60%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+
+      .email-wrapper,
+      .password-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .generator-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        align-self: flex-start;
+
+        input {
+          accent-color: $secondary;
+          width: 14px;
+          height: 14px;
+          border: 1px solid $grey;
+        }
+      }
+
+      label {
+        font-size: 16px;
+        color: $light-font;
+        font-weight: 500;
+      }
+
+      input {
+        border: 1px solid $grey;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      .cmn-btn {
+        margin-bottom: 22px;
+        align-self: flex-start;
+      }
+    }
+  }
+}

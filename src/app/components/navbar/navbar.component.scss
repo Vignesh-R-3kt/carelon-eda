@@ -1,0 +1,129 @@
+@import "../../../variables.scss";
+
+.hamburger-menu {
+  background: $secondary;
+  min-height: 100vh;
+  padding: 12px 12px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .hamburger-btn {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    margin-top: 5px;
+    align-self: center;
+    margin-right: 6px;
+    transition: all 0.4s ease;
+
+    span {
+      background: $white;
+      height: 4px;
+      width: 100%;
+      border-radius: 4px;
+      transition: all 0.1s ease;
+    }
+
+    &.active {
+      transform: scale(0.6);
+
+      span {
+        transition: all 0.4s ease;
+
+        &:first-child {
+          transform: rotate(45deg) translateY(12px);
+        }
+
+        &:nth-child(2) {
+          transform: scale(0);
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translateY(-12px);
+        }
+      }
+    }
+  }
+
+  .nav-items {
+    padding: 48px 6px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      display: flex;
+      justify-content: center;
+
+      a {
+        color: $white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+          filter: saturate(0) brightness(0) invert(1);
+          transform: scale(0.8);
+        }
+
+        span {
+          display: inline-block;
+          overflow: hidden;
+          width: 0;
+          opacity: 0;
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        &:hover {
+          background: $primary;
+        }
+
+        &.active {
+          background: $white !important;
+          color: $primary;
+
+          img {
+            filter: unset !important;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+
+  &.expand {
+    .hamburger-btn {
+      align-self: flex-end;
+    }
+
+    .nav-items {
+      li {
+        a {
+          border-radius: 0 32px 32px 0;
+          width: unset;
+          padding: 6px 12px;
+
+          span {
+            width: 140px;
+            opacity: 1;
+            transition: all 0.4s ease, opacity 0.4s 0.3s ease;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}

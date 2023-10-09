@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="wrapper">
+        <div class="logo">
+            <a>
+                <!-- <img src="../.././../assets/images/favicon.png" alt="logo"> -->
+            </a>
+        </div>
+        <div class="user-wrapper">
+            <button class="user-btn" (click)="toggleDropdown()">
+                <img src="../../../assets/icons/user-profile-icon.png" alt="user-icon">
+            </button>
+            <ul class="user-dropdown" *ngIf="enableDropdown">
+                <li>
+                    <a routerLink="/change-password">
+                        <span>Change Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/login">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

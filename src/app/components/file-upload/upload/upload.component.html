@@ -1,0 +1,29 @@
+<div class="input-field" appDnd (fileDropped)="onFileDropped($event)" [ngClass]="{'drag-active' : isDragActive}">
+    <input type="file" #fileDropRef id="fileDropRef" [multiple]="multipleFiles" (change)="fileBrowseHandler($event)"
+        (dragenter)="enterDragEvent()" (dragleave)="leaveDragEvent()" (drop)="leaveDragEvent()" />
+    <img src="../../../../assets/icons/upload-icon-v2.png" alt="">
+    <p>Drag and drop file{{multipleFiles ? "s" : ""}} here</p>
+    <span>or</span>
+    <label for="fileDropRef">Browse for file{{multipleFiles ? "s" : ""}}</label>
+</div>
+
+<div class="files-list">
+    <p class="total-files-count" *ngIf="files.length">Total File{{multipleFiles ? "s" : ""}} : {{ files.length}}</p>
+    <p class="total-files-count" *ngIf="!files.length">No File{{multipleFiles ? "s" : ""}} Selected</p>
+    <ul class="files-list-container">
+        <li class="single-file" *ngFor="let file of files; let i = index">
+            <span class="serial-number" *ngIf="multipleFiles">{{ i + 1 }}.</span>
+            <div class="info">
+                <h4 class="name">
+                    {{ file?.name }}
+                </h4>
+                <p class="size">
+                    {{ formatBytes(file?.size) }}
+                </p>
+            </div>
+            <button (click)="deleteFile(i)" class="delete-btn">
+                <img src="../../../../assets/icons/close-icon.png" alt="close-icon">
+            </button>
+        </li>
+    </ul>
+</div>

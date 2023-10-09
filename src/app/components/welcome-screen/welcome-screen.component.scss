@@ -1,0 +1,37 @@
+@import "../../../variables.scss";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    max-width: 400px;
+    padding: 32px 24px;
+    border: 1px solid $grey;
+    border-radius: 12px;
+    width: 60%;
+
+    h3 {
+      color: $dark;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      margin-bottom: 22px;
+      color: $light-font;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      margin-bottom: 22px;
+      color: $light-font;
+    }
+
+    a {
+      margin-bottom: 22px;
+    }
+  }
+}
